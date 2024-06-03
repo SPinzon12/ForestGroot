@@ -21,7 +21,9 @@ Para la selección del conjunto de datos, se buscaron principalmente datasets co
 </div>
 <br>
 
-El resultado fue un dataset de 830 imágenes en total. El motivo del desbalance en la captura de las imágenes se debe al número de instancias por imagen que hay, siendo una instancia un objeto dentro de la imagen, la cual puede tener más de una instancia. Las imágenes tenían características específicas como una resolución fija de 640x640 píxeles, y cada imagen fue tomada aproximadamente a 700 metros de altura, de acuerdo a Google Earth.
+El resultado fue un dataset de 400 imágenes en total, un aproximado de 100 imágenes por clase. Pese a esto y a la posibilidad de que existieran más de una instancia por imagen, se creó un desbalance entre las clases. Por tal motivo, se decidió balancear el número de instancias añadiendo más imágenes a la clase con menos instancias mediante un data augmentation en código, terminando con un total de 830 imágenes. El motivo del desbalance en la captura de las imágenes se debe al número de instancias por imagen que hay, siendo una instancia un objeto dentro de la imagen, la cual puede tener más de una instancia. Las imágenes tenían características específicas como una resolución fija de 640x640 píxeles, y cada imagen fue tomada aproximadamente a 700 metros de altura, de acuerdo a Google Earth.
+
+Después, en Roboflow, se llevó a cabo un proceso adicional de data augmentation con el fin de aumentar aún más el número de datos balanceados para el entrenamiento. Esta etapa de aumento de datos permitió diversificar la variabilidad en el conjunto de datos, introduciendo modificaciones como rotaciones, traslaciones, entre otros. Este enfoque de expansión de datos garantizó una mayor robustez del modelo durante el entrenamiento y una mejor capacidad para generalizar patrones en datos nuevos y no vistos. Como resultado de este proceso, el dataset final alcanzó un total de 1992 imágenes, proporcionando una base sólida y rica en variedad para el desarrollo y la evaluación del modelo.
 
 <div align="center">
    
