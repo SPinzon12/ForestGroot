@@ -30,7 +30,7 @@ Después, en Roboflow, se llevó a cabo un proceso adicional de data augmentatio
 
 <div align="center">
    
-   | Imagen original  | Imagen segmentada |
+   | Imagen Original  | Imagen Segmentada |
    | ------------- | ------------- |
    | <img src="https://i.postimg.cc/d0w36X0d/Captura3.jpg" alt="Perro" width="500" height="500"/> | <img src="https://i.postimg.cc/TwPwMDg3/Captura2.jpg" alt="Perro" width="500" height="500"/> |
    
