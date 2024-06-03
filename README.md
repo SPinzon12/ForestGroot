@@ -41,8 +41,33 @@ Para realizar el entrenamiento del modelo, puedes usar el notebook XXXXX. Sigue 
 > En caso de no poseer el computo adecuado para el entrenamiento se recomienda utilizar la T4 GPU de Google Colab. Esto facilitara su ejecución al usar los recursos de la GPU del servidor y no de tu maquina.
 
 ## Setup - Instalación
-Antes de ejecutar el codigo asegurate de tener instalados los siguientes requerimientos:
+1. Antes de ejecutar el codigo asegurate de tener instalados los siguientes requerimientos:
 ```bash
    pip install torch torchvision
    pip install ultralytics
    pip install gradio
+```
+2. Una vez tenemos la librerias instaladas solo basta con ejecutar el siguiente comando en la consola para iniciar.
+```
+python3 XXXXXXX.py
+```
+3. Cuando ya hayas ejecutado el comando, en la terminal nos mostrara dos URL:
+![image](https://github.com/SPinzon12/forestGroot/assets/99686755/d9e1e748-3184-4c01-9cb6-4fb5e25ce6af)
+
+> [!NOTE]
+> La primera es para ver el aplicativo de gradio de forma local y el segundo es para compatirlo con algun compañero de forma publica.
+
+
+4. Una vez dentro del link, al lado izquierdo encontraremos el campo donde ingresaremos la imagen a analizar, puedes jugar con los valores de Confianza y IoU a tu gusto.
+<div align="center">
+   <img align="center" src="https://i.postimg.cc/tgJT86hC/Captura4.jpg" alt="Perro" width="650" height="500"/>
+</div>
+
+5. Una vez selecciones y la imagen y presiones 'Submit' empezara el proceso de segmentacion con el modelo de YOLO, y nos mostrara una comparativa de la imagen original y la imagen segmentada.
+<div align="center">
+   <img align="center" src="https://i.postimg.cc/xTQdnhKZ/Captura5.jpg" alt="Perro" width="850" height="450"/>
+</div>
+
+
+
+
