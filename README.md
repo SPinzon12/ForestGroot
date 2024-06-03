@@ -21,7 +21,7 @@ Para la selección del conjunto de datos, se buscaron principalmente datasets co
 </div>
 <br>
 
-El resultado fue un dataset de 830 imágenes en total, 90 de deforestación, 103 de incendios, 199 urbanas y 191 de cuerpos de agua. El motivo del desbalance en la captura de las imágenes se debe al número de instancias por imagen que hay, siendo una instancia un objeto dentro de la imagen, la cual puede tener más de una instancia. Las imágenes tenían características específicas como una resolución fija de 640x640 píxeles, y cada imagen fue tomada aproximadamente a 700 metros de altura, de acuerdo a Google Earth.
+El resultado fue un dataset de 830 imágenes en total. El motivo del desbalance en la captura de las imágenes se debe al número de instancias por imagen que hay, siendo una instancia un objeto dentro de la imagen, la cual puede tener más de una instancia. Las imágenes tenían características específicas como una resolución fija de 640x640 píxeles, y cada imagen fue tomada aproximadamente a 700 metros de altura, de acuerdo a Google Earth.
 
 <div align="center">
    
