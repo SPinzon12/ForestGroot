@@ -30,7 +30,9 @@ El resultado fue un dataset de 830 imágenes en total, 90 de deforestación, 103
    | <img src="https://i.postimg.cc/d0w36X0d/Captura3.jpg" alt="Perro" width="500" height="500"/> | <img src="https://i.postimg.cc/TwPwMDg3/Captura2.jpg" alt="Perro" width="500" height="500"/> |
    
 </div>
-<br>
+
+## Yolo (You Only Look Once)
+YOLO es un sistema de detección de objetos en imágenes o videos. A diferencia de otros enfoques que dividían la tarea de detección en múltiples etapas, como la selección de regiones y la clasificación, YOLO aborda el problema de detección de objetos de manera integral. En lugar de examinar la imagen varias veces a diferentes escalas y ubicaciones, YOLO realiza la detección de una sola vez (de ahí su nombre), utilizando una red neuronal convolucional para predecir simultáneamente las cajas delimitadoras y las probabilidades de clase para los objetos en la imagen.
 
 ## Entrenamiento
 Para realizar el entrenamiento del modelo, puedes usar el notebook XXXXX. Sigue todos los pasos en orden para su realización.
