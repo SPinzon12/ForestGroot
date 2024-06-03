@@ -9,10 +9,17 @@ El objetivo principal de este proyecto se basa en desarrollar un sistema de dete
 ## Dataset
 Para la selección del conjunto de datos, se buscaron principalmente datasets con imágenes aéreas. Sin embargo, debido a la falta de disponibilidad de un dataset adecuado, nos vimos en la tarea de crear nuestro propio conjunto de datos utilizando imágenes obtenidas de Google Earth. En este proceso, se priorizó la obtención de imágenes que mostraran índices de deforestación en los alrededores del área amazónica, con un enfoque particular en Colombia. Para la recolección de las imágenes, se tuvo en cuenta el criterio de los profesores, quienes recomendaron capturar imágenes no solo de áreas deforestadas, sino también otras areas de interez con el fin de realizar un buen trabajo en términos de segmentación de objetos, las clases resultados fueron:
 
-- deforestation - Areas Deforestadas
-- urban - Areas Urbanas
-- fire - Incendios Forestales
-- water - Cuerpos de Agua
+<div align="center">
+   
+   | Clase  | Descripción |
+   | ------------- | ------------- |
+   | deforestation | Áreas donde con indices de deforestación |
+   | urban | Áreas urbanas y rurales |
+   | fire | Áreas con indices de incendios forestales |
+   | water | Áreas con cuerpos de agua (rios, lagos, etc) |
+   
+</div>
+<br>
 
 El resultado fue un dataset de 830 imágenes en total, 90 de deforestación, 103 de incendios, 199 urbanas y 191 de cuerpos de agua. El motivo del desbalance en la captura de las imágenes se debe al número de instancias por imagen que hay, siendo una instancia un objeto dentro de la imagen, la cual puede tener más de una instancia. Las imágenes tenían características específicas como una resolución fija de 640x640 píxeles, y cada imagen fue tomada aproximadamente a 700 metros de altura, de acuerdo a Google Earth.
 
