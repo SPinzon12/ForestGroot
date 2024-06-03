@@ -55,7 +55,7 @@ python3 XXXXXXX.py
 ![image](https://github.com/SPinzon12/forestGroot/assets/99686755/d9e1e748-3184-4c01-9cb6-4fb5e25ce6af)
 
 > [!NOTE]
-> La primera es para ver el aplicativo de gradio de forma local y el segundo es para compatirlo con algun compañero de forma publica.
+> El primer link es para ver el aplicativo de gradio de forma local y el segundo es para compatirlo con algun compañero de forma publica.
 
 
 4. Una vez dentro del link, al lado izquierdo encontraremos el campo donde ingresaremos la imagen a analizar, puedes jugar con los valores de Confianza y IoU a tu gusto.
