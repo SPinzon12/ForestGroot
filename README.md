@@ -38,7 +38,7 @@ YOLO es un sistema de detección de objetos en imágenes o videos. A diferencia 
 Para realizar el entrenamiento del modelo, puedes usar el notebook XXXXX. Sigue todos los pasos en orden para su realización.
 
 > [!IMPORTANT]
-> En caso de no poseer el computo adecuado para el entrenamiento se recomienda utilizar la T4 GPU de Google Colab.
+> En caso de no poseer el computo adecuado para el entrenamiento se recomienda utilizar la T4 GPU de Google Colab. Esto facilitara su ejecución al usar los recursos de la GPU del servidor y no de tu maquina.
 
 ## Setup - Instalación
 Antes de ejecutar el codigo asegurate de tener instalados los siguientes requerimientos:
