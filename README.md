@@ -1,5 +1,5 @@
 # forestGroot - Detección y segmentación de Areas con indices de deforestación
-[Contribution guidelines for this project] Elaborado Por: Juan Camilo Vargas - Sebastian Diaz - Samuel Pinzón
+##### _Elaborado Por: Juan Camilo Vargas - Sebastian Diaz - Samuel Pinzón_
 
 ## Escenario
 La deforestación ilegal representa uno de los más grandes desafíos en Colombia, con consecuencias bastante perjudiciales para el medio ambiente, la economía y los ciudadanos. Esta práctica indebida va desde la tala de árboles hasta la conversión de bosques en tierras agrícolas, arraigándose en diversas regiones del país y siendo alimentada principalmente por la ausencia de una supervisión y regulación efectiva. Como consecuencia de esta problemática surge la necesidad de buscar soluciones innovadoras y eficaces que sean capaces de combatir la deforestación ilegal. En este contexto, los avances tecnológicos, principalmente en el campo de la inteligencia artificial, buscan ofrecer una herramienta para abordar este desafío.
