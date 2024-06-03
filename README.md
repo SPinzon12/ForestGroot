@@ -1,4 +1,4 @@
-# Detección y segmentación de Areas con indices de deforestación
+# Detección y segmentación de areas con indices de deforestación
 ##### _Elaborado Por: Juan Camilo Vargas - Sebastian Diaz - Samuel Pinzón_
 
 ## Escenario
@@ -20,7 +20,7 @@ El resultado fue un dataset de 830 imágenes en total, 90 de deforestación, 103
    
    | Imagen original  | Imagen segmentada |
    | ------------- | ------------- |
-   | <img src="https://i.postimg.cc/sDL5nVFW/Captura1.jpg" alt="Perro" width="256" height="256"/> | <img src="https://i.postimg.cc/pXrDYmSx/Captura.jpg" alt="Perro" width="256" height="256"/> |
+   | <img src="https://i.postimg.cc/d0w36X0d/Captura3.jpg" alt="Perro" width="500" height="500"/> | <img src="https://i.postimg.cc/TwPwMDg3/Captura2.jpg" alt="Perro" width="500" height="500"/> |
    
 </div>
 <br>
@@ -30,3 +30,10 @@ Para realizar el entrenamiento del modelo, puedes usar el notebook XXXXX. Sigue 
 
 > [!IMPORTANT]
 > En caso de no poseer el computo adecuado para el entrenamiento se recomienda utilizar la T4 GPU de Google Colab.
+
+## Setup - Instalación
+Antes de ejecutar el codigo asegurate de tener instalados los siguientes requerimientos:
+```bash
+   pip install torch torchvision
+   pip install ultralytics
+   pip install gradio
