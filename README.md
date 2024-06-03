@@ -40,7 +40,7 @@ Después, en Roboflow, se llevó a cabo un proceso adicional de data augmentatio
 YOLO es un sistema de detección de objetos en imágenes o videos basado en redes neuronales convolucionales. A diferencia de otros enfoques que dividían la tarea de detección en múltiples etapas, como la selección de regiones y la clasificación, YOLO aborda el problema de detección de objetos de manera integral. En lugar de examinar la imagen varias veces a diferentes escalas y ubicaciones, YOLO realiza la detección de una sola vez (de ahí su nombre), utilizando una red neuronal convolucional para predecir simultáneamente las cajas delimitadoras y las probabilidades de clase para los objetos en la imagen.
 
 ## Entrenamiento
-Para realizar el entrenamiento del modelo, puedes usar el notebook XXXXX. Sigue todos los pasos en orden para su realización.
+Para realizar el entrenamiento del modelo, puedes usar el notebook train_forestgroot.ipynb. Sigue todos los pasos en orden para su realización.
 
 > [!IMPORTANT]
 > En caso de no poseer el computo adecuado para el entrenamiento se recomienda utilizar la T4 GPU de Google Colab. Esto facilitara su ejecución al usar los recursos de la GPU del servidor y no de tu maquina.
