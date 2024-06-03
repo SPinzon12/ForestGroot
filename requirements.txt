@@ -1,0 +1,6 @@
+ultralytics==8.2.27
+roboflow==1.1.30
+tensorflow==2.15.0
+Augmentor==0.2.12
+gradio==4.32.1
+pillow==10.3.0
