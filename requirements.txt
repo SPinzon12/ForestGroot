@@ -6,3 +6,4 @@ gradio==4.32.1
 Pillow==10.3.0
 torch==2.3.0
 torchvision==0.18.0
+dill==0.3.8
