@@ -4,15 +4,15 @@ from ultralytics import YOLO
 import os
 
 # Obtener la lista de modelos disponibles en la carpeta "models"
-model_dir = "../models"
-model_files = [f for f in os.listdir(model_dir) if f.endswith(".pt")]
+model_dir = "models"
+modelos = [f for f in os.listdir(model_dir) if f.endswith(".pt")]
 
 # Función para cargar el modelo seleccionado
 def load_model(model_name):
     return YOLO(os.path.join(model_dir, model_name))
 
 # Cargar el modelo predeterminado
-model = load_model(model_files[0])
+model = load_model(modelos[0])
 
 js = """
 function createGradioAnimation() {
@@ -48,10 +48,56 @@ function createGradioAnimation() {
 }
 """
 
+css = """
+
+    p {
+    font-size: 16px;
+    padding-left: 20px;
+    padding-right: 20px;
+    }
+
+    #gradio-animation {
+    background-color: #53b844;
+    color: #0b0f19;
+    width: 700px;
+    border-radius: 20px;
+    }
+
+    .gradio-container.gradio-container-4-32-1.svelte-182fdeq.app {
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+    }
+
+    .lg.primary.svelte-cmf5ev {
+    background-color: #53b844 !important;
+    }
+
+    .selected.svelte-1ebruwp {
+    color: #53b844 !important;
+    }
+
+    .primary.svelte-cmf5ev {
+    border: #53b844 !important;
+    background: #53b844 !important;
+    }
+
+    .svelte-pc1gm4 input {
+    background-image: #53b844 !important;
+    background-color: #53b844 !important;
+    }
+
+    .border-none.svelte-1sk0pyu {
+    background-image: #1f2937 !important;
+    }
+
+"""
+
 # Función de predicción de imagen
 def predict_image(model_name, img, conf_threshold, iou_threshold):
     global model
     model = load_model(model_name)
+    print(model_name)
     
     results = model.predict(
         source=img,
@@ -72,15 +118,16 @@ def predict_image(model_name, img, conf_threshold, iou_threshold):
 iface = gr.Interface(
     fn=predict_image,
     inputs=[
-        gr.Dropdown(choices=model_files, value=model_files[0], label="Seleccionar Modelo"),
+        gr.Dropdown(choices=modelos, value=modelos[0], label="Seleccionar Modelo"),
         gr.Image(type="pil", label="Subir Imagen"),
         gr.Slider(minimum=0, maximum=1, value=0.25, label="Umbral de Confianza"),
         gr.Slider(minimum=0, maximum=1, value=0.45, label="Intersección-sobre-unión (IoU)"),
     ],
     outputs=gr.Image(type="pil", label="Resultado"),
-    title="Forestgroot",
-    description="Carga una imagen para detectar deforestación y otros objetos utilizando diferentes modelos YOLOv8. Ajusta los umbrales de confianza e IoU para personalizar la detección.",
+    title=" &#x1F332 Forestgroot - Detección de Areas con Indices de Deforestación",
+    description="Selecciona el modelo de tu preferencia, carga una imagen para detectar deforestación y otros objetos utilizando diferentes modelos YOLOv8. Ajusta los umbrales de confianza e IoU para personalizar la detección.",
     js=js,
+    css=css,
 )
 
 if __name__ == "__main__":
