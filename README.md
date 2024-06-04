@@ -75,7 +75,7 @@ Para realizar el entrenamiento del modelo, puedes usar el notebook `/notebooks/t
 
 4. Una vez que hayas configurado el entorno virtual y tengas las dependencias instaladas, ejecuta el siguiente comando en la consola para iniciar la aplicación:
     ```bash
-    python3 scripts/forestgroot_gradio.py
+    python scripts/forestgroot_gradio.py
     ```
 
 ### Uso de la Aplicación
