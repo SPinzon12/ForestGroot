@@ -1,8 +1,18 @@
 import gradio as gr
 import PIL.Image as Image
 from ultralytics import YOLO
+import os
 
-model = YOLO("../models/forestgroot_yolov8l_seg.pt")
+# Obtener la lista de modelos disponibles en la carpeta "models"
+model_dir = "../models"
+model_files = [f for f in os.listdir(model_dir) if f.endswith(".pt")]
+
+# Función para cargar el modelo seleccionado
+def load_model(model_name):
+    return YOLO(os.path.join(model_dir, model_name))
+
+# Cargar el modelo predeterminado
+model = load_model(model_files[0])
 
 js = """
 function createGradioAnimation() {
@@ -38,7 +48,11 @@ function createGradioAnimation() {
 }
 """
 
-def predict_image(img, conf_threshold, iou_threshold):
+# Función de predicción de imagen
+def predict_image(model_name, img, conf_threshold, iou_threshold):
+    global model
+    model = load_model(model_name)
+    
     results = model.predict(
         source=img,
         conf=conf_threshold,
@@ -54,19 +68,19 @@ def predict_image(img, conf_threshold, iou_threshold):
 
     return im
 
-
+# Interfaz de Gradio
 iface = gr.Interface(
     fn=predict_image,
     inputs=[
+        gr.Dropdown(choices=model_files, value=model_files[0], label="Seleccionar Modelo"),
         gr.Image(type="pil", label="Subir Imagen"),
         gr.Slider(minimum=0, maximum=1, value=0.25, label="Umbral de Confianza"),
         gr.Slider(minimum=0, maximum=1, value=0.45, label="Intersección-sobre-unión (IoU)"),
     ],
     outputs=gr.Image(type="pil", label="Resultado"),
     title="Forestgroot",
-    description="Carga una imagen para detectar deforestación y otros objetos utilizando el modelo ForestGroot YOLOv8l_seg. Ajusta los umbrales de confianza e IoU para personalizar la detección.",
+    description="Carga una imagen para detectar deforestación y otros objetos utilizando diferentes modelos YOLOv8. Ajusta los umbrales de confianza e IoU para personalizar la detección.",
     js=js,
-
 )
 
 if __name__ == "__main__":
