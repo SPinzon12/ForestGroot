@@ -65,7 +65,7 @@ python3 XXXXXXX.py
 
 4. Una vez dentro del link, al lado izquierdo encontraremos los campos donde se escogera el modelo e ingresaremos la imagen a analizar, puedes jugar con los valores de Confianza y IoU a tu gusto.
 <div align="center">
-   <img align="center" src="https://i.postimg.cc/Jzt6NhmN/Captura.jpg" alt="Perro" width="700" height="500"/>
+   <img align="center" src="https://i.postimg.cc/Jzt6NhmN/Captura.jpg" alt="Perro" width="650" height="580"/>
 </div>
 
 5. Una vez selecciones y la imagen y presiones 'Submit' empezara el proceso de segmentacion con el modelo de YOLO, y nos mostrara una comparativa de la imagen original y la imagen segmentada.
