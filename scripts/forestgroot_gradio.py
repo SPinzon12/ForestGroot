@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import os
 
 # Obtener la lista de modelos disponibles en la carpeta "models"
-model_dir = "C:/Users/camil/OneDrive/Documents/GitHub/forestGroot/models"
+model_dir = "./models"
 modelos = [f for f in os.listdir(model_dir) if f.endswith(".pt")]
 
 # Función para cargar el modelo seleccionado
