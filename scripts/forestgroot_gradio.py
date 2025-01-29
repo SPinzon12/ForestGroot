@@ -4,7 +4,7 @@ from ultralytics import YOLO
 import os
 
 # Obtener la lista de modelos disponibles en la carpeta "models"
-model_dir = "models"
+model_dir = "C:/Users/camil/OneDrive/Documents/GitHub/forestGroot/models"
 modelos = [f for f in os.listdir(model_dir) if f.endswith(".pt")]
 
 # Función para cargar el modelo seleccionado
@@ -50,6 +50,14 @@ function createGradioAnimation() {
 
 css = """
 
+    gradio-app {
+    background-color: #0b0f19 !important; 
+    }
+
+    empty.svelte-1oiin9d.large.unpadded_box {
+    background-color: #0b0f19 !important;
+    }
+
     p {
     font-size: 16px;
     padding-left: 20px;
@@ -63,13 +71,14 @@ css = """
     border-radius: 20px;
     }
 
-    .gradio-container.gradio-container-4-32-1.svelte-182fdeq.app {
+    .gradio-container.gradio-container-5-13-2.svelte-1yb15ey.app {
+    display: flex;
     justify-content: center;
     align-items: center;
-    margin: 0px;
+    margin-left: 20px;
     }
 
-    .lg.primary.svelte-cmf5ev {
+    .lg.primary.svelte-5st68j {
     background-color: #53b844 !important;
     }
 
@@ -82,7 +91,14 @@ css = """
     background: #53b844 !important;
     }
 
-    .svelte-pc1gm4 input {
+    .svelte-10lj3xl input[type="range"] {
+    accent-color: #53b844 !important;
+    background-image: #53b844 !important;
+    background-color: #53b844 !important;
+    }
+
+    slider_input_container.svelte-10lj3xl {
+    accent-color: #53b844 !important;
     background-image: #53b844 !important;
     background-color: #53b844 !important;
     }
@@ -115,7 +131,7 @@ def predict_image(model_name, img, conf_threshold, iou_threshold):
     return im
 
 # Interfaz de Gradio
-iface = gr.Interface(
+demo = gr.Interface(
     fn=predict_image,
     inputs=[
         gr.Dropdown(choices=modelos, value=modelos[0], label="Seleccionar Modelo"),
@@ -131,4 +147,4 @@ iface = gr.Interface(
 )
 
 if __name__ == "__main__":
-    iface.launch(share=True)
+    demo.launch(share=True)

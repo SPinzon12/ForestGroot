@@ -2,7 +2,7 @@ ultralytics==8.2.27
 roboflow==1.1.30
 tensorflow==2.15.0
 Augmentor==0.2.12
-gradio==4.32.1
+gradio==5.13.2
 Pillow==10.3.0
 torch==2.3.0
 torchvision==0.18.0

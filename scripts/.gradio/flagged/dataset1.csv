@@ -1,0 +1,4 @@
+Seleccionar Modelo,Subir Imagen,Umbral de Confianza,Intersección-sobre-unión (IoU),Resultado,timestamp
+forestgroot_yolov8l_seg.pt,.gradio\flagged\Subir Imagen\5c6242241c319a13a071\WhatsApp Image 2024-05-07 at 11.20.50 PM.jpeg,0.25,0.45,.gradio\flagged\Resultado\1a7a91683a6c40246817\image.webp,2025-01-28 22:52:41.622139
+forestgroot_yolov8l_seg.pt,.gradio\flagged\Subir Imagen\895cbfceb37f2792b53b\WhatsApp Image 2024-05-07 at 11.20.50 PM.jpeg,0.25,0.45,.gradio\flagged\Resultado\95dd5de90b9dab093cdd\image.webp,2025-01-28 22:52:47.977819
+forestgroot_yolov8l_seg.pt,.gradio\flagged\Subir Imagen\7ac3e6b327e80e2dc359\WhatsApp Image 2024-05-07 at 11.20.50 PM.jpeg,0.25,0.45,.gradio\flagged\Resultado\4c4da62f9bb12d4bd48d\image.webp,2025-01-28 22:52:50.993392
